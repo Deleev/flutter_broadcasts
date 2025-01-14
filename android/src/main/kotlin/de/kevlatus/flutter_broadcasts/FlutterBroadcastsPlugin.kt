@@ -48,7 +48,7 @@ class CustomBroadcastReceiver(
 
     fun start(context: Context) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            context.registerReceiver(this, intentFilter, Context.RECEIVER_NOT_EXPORTED)
+            context.registerReceiver(this, intentFilter, Context.RECEIVER_EXPORTED)
         } else {
             context.registerReceiver(this, intentFilter)
         }
